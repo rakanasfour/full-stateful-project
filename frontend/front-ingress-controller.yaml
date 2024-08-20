@@ -23,5 +23,6 @@ spec:
         backend:
           service:
             name: mongo-backend-service
+            namespace: backend
             port:
               number: 80
