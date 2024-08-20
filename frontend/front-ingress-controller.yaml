@@ -4,8 +4,9 @@ metadata:
   name: mongo-ingress
   namespace: frontend
   annotations:
-    spec.ingressClassName: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx  # Correct placement
   rules:
   - host: rakanprojects.com
     http:
