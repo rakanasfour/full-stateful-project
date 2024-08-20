@@ -18,11 +18,3 @@ spec:
             name: mongo-frontend-service
             port:
               number: 80
-      - path: /items
-        pathType: Prefix
-        backend:
-          service:
-            name: mongo-backend-service
-            namespace: backend
-            port:
-              number: 80
