@@ -12,3 +12,8 @@ spec:
     - namespaceSelector:
         matchLabels:
           name: frontend
+    ports:
+    - protocol: TCP
+      port: 80
+  policyTypes:
+  - Ingress
