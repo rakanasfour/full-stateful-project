@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: mongo-ingress
-  namespace: default
+  namespace: frontend
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -16,6 +16,7 @@ spec:
         backend:
           service:
             name: mongo-frontend-service
+            namespace: frontend
             port:
               number: 80
       - path: /items
@@ -23,5 +24,6 @@ spec:
         backend:
           service:
             name: mongo-backend-service
+            namespace: backend
             port:
               number: 80
