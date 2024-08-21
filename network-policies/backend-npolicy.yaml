@@ -1,21 +1,14 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
 metadata:
-  name: java-backend
+  name: backend-access
   namespace: backend
 spec:
-  replicas: 3
-  selector:
+  podSelector:
     matchLabels:
-      app: java-backend
-  template:
-    metadata:
-      labels:
-        app: java-backend
-    spec:
-      containers:
-      - name: java-backend
-        image: 866934333672.dkr.ecr.us-east-2.amazonaws.com/java-mongo:latest
-        ports:
-        - containerPort: 8080
-       
+      app: mongo-backend-service
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          name: frontend
