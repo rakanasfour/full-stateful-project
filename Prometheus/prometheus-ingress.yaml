@@ -10,7 +10,7 @@ spec:
     http:
       paths:
       - path: /prometheus
-        pathType: ImplementationSpecific
+        pathType: Prefix
         backend:
           service:
             name: prometheus-server
