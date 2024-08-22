@@ -4,7 +4,7 @@ metadata:
   name: backend-mongo-ingress
   namespace: backend
 spec:
-  ingressClassName: ingress-nginx
+  ingressClassName: nginx
   rules:
   - host: rakanprojects.com
     http:
