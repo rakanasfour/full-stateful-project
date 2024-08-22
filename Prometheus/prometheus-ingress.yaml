@@ -9,7 +9,7 @@ spec:
   - host: rakanprojects.com
     http:
       paths:
-      - path: /prometheus
+      - path: /prometheus/graph
         pathType: ImplementationSpecific
         backend:
           service:
