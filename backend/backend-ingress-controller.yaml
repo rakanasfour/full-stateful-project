@@ -15,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: mongo-backend-service
+            name: mongo-backend-service.backend.svc.cluster.local
             port:
               number: 80
