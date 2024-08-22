@@ -10,6 +10,6 @@ spec:
   ports:
   - port: 9090         # The target port Prometheus listens on
     targetPort: 9090   # The port on the Prometheus container
-    nodePort: 30090    # You can specify a port in the range 30000-32767 or let Kubernetes assign one
+    nodePort: 30080    # You can specify a port in the range 30000-32767 or let Kubernetes assign one
     protocol: TCP
 
