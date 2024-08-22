@@ -4,6 +4,7 @@ metadata:
   name: prometheus-ingress
   namespace: prometheus
 spec:
+  ingressClassName: nginx
   rules:
   - host: rakanprojects.com
     http:
