@@ -8,7 +8,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: items.rakanprojects.com
+  - host: rakanprojects.com
     http:
       paths:
       - path: /items
