@@ -1,15 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: prometheus-nodeport
+  name: prometheus-clusterip
   namespace: prometheus
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
-    app: prometheus  # This should match the labels of the Prometheus pods
+    app: prometheus
   ports:
-  - port: 9090         # The target port Prometheus listens on
-    targetPort: 9090   # The port on the Prometheus container
-    nodePort: 30080    # You can specify a port in the range 30000-32767 or let Kubernetes assign one
-    protocol: TCP
-
+  - port: 9090
+    targetPort: 9090

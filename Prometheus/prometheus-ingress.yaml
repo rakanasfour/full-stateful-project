@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: prometheus-ingress
   namespace: prometheus
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -13,6 +15,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: prometheus-server
+            name: prometheus-clusterip
             port:
-              number: 80
+              number: 9090
